@@ -5,58 +5,81 @@ const card_options = document.getElementsByClassName('card-button');
 
 const contexts = [
   {
-    img: './img/dragonite.png',
+    img: './img/bulbasaur.png',
+    Hp: 'Hp: 200',
     Ataque: 'Ataque: 600',
     Defesa: 'Defesa: 500',
     Velocidade: 'Velocidade: 300',
     Total: 'Total: 1.700',
-    habilidadeprincipal: 'Dança do Dragão',
-    habilidadesecundaria: 'Hiper Raio',
+    Tipo: 'Tipo: Planta',
+    habilidadeprincipal: 'Folhas navalha',
+    habilidadesecundaria: 'Raio solar',
+  },
+  {
+    img: './img/charmander.png',
+    Hp: 'Hp: 150',
+    Ataque: 'Ataque: 600',
+    Defesa: 'Defesa: 500',
+    Velocidade: 'Velocidade: 300',
+    Total: 'Total: 1.700',
+    Tipo: 'Tipo: Fogo',
+    habilidadeprincipal: 'Brasa',
+    habilidadesecundaria: 'Lança chamas',
   },
   {
     img: './img/pikachu.png',
-    Ataque: 'Ataque: 600',
-    Defesa: 'Defesa: 500',
-    Velocidade: 'Velocidade: 300',
-    Total: 'Total: 1.700',
+    Hp: 'Hp: 160',
+    Ataque: 'Ataque: 700',
+    Defesa: 'Defesa: 300',
+    Velocidade: 'Velocidade: 150',
+    Total: 'Total: 1.200',
+    Tipo: 'Tipo: Eletrico',
     habilidadeprincipal: 'Bola elétrica',
     habilidadesecundaria: 'Choque do trovão',
   },
   {
     img: './img/gengar.png',
-    Ataque: 'Ataque: 700',
-    Defesa: 'Defesa: 300',
-    Velocidade: 'Velocidade: 150',
-    Total: 'Total: 1.200',
+    Hp: 'Hp: 200',
+    Ataque: 'Ataque: 600',
+    Defesa: 'Defesa: 500',
+    Velocidade: 'Velocidade: 300',
+    Total: 'Total: 1.700',
+    Tipo: 'Tipo: Sombrio',
     habilidadeprincipal: 'Lambida',
     habilidadesecundaria: 'Bola sombria',
   },
   {
     img: './img/gyarados.png',
+    Hp: 'Hp: 500',
     Ataque: 'Ataque: 600',
     Defesa: 'Defesa: 500',
     Velocidade: 'Velocidade: 300',
     Total: 'Total: 1.700',
+    Tipo: 'Tipo: Voador',
     habilidadeprincipal: 'Furacão',
     habilidadesecundaria: 'Hidro bomba',
   },
   {
-    img: './img/charmander.png',
-    Ataque: 'Ataque: 600',
-    Defesa: 'Defesa: 500',
-    Velocidade: 'Velocidade: 300',
-    Total: 'Total: 1.700',
-    habilidadeprincipal: 'Brasa',
-    habilidadesecundaria: 'Lança chamas',
-  },
-  {
-    img: './img/bulbasaur.png',
+    img: './img/dragonite.png',
+    Hp: 'Hp: 800',
     Ataque: 'Ataque: 510',
     Defesa: 'Defesa: 200',
     Velocidade: 'Velocidade: 300',
     Total: 'Total: 1.500',
-    habilidadeprincipal: 'Folhas navalhaa',
-    habilidadesecundaria: 'Raio solar',
+    Tipo: 'Tipo: Dragão',
+    habilidadeprincipal: 'Dança do Dragão',
+    habilidadesecundaria: 'Hiper Raio',
+  },
+  {
+    img: './img/mewtwo.png',
+    Hp: 'Hp: 700',
+    Ataque: 'Ataque: 510',
+    Defesa: 'Defesa: 200',
+    Velocidade: 'Velocidade: 300',
+    Total: 'Total: 1.500',
+    Tipo: 'Tipo: Psíquico',
+    habilidadeprincipal: 'Choque psíquico',
+    habilidadesecundaria: 'Bola sombria',
   },
 ];
 
@@ -65,6 +88,9 @@ for (const key in contexts) {
   card_options[key].onclick = () => {
     card_imagem.src = context.img;
     card_status.innerHTML =
+      '<li>' +
+      context.Hp +
+      '</li>' +
       '<li>' +
       context.Ataque +
       '</li>' +
@@ -76,6 +102,9 @@ for (const key in contexts) {
       '</li>' +
       '<li>' +
       context.Total +
+      '</li>' +
+      '<li>' +
+      context.Tipo +
       '</li>';
     card_skill.innerHTML =
       '<li>' +
