@@ -60,6 +60,7 @@
     height:60vh;
     background-color:yellow;
     border-radius: 15px 15px 0px 0px;
+    padding: 10px 10px 0;
 }
 .card_name{
     display: flex;
@@ -90,7 +91,6 @@
 .card-status{
     display: flex;
     flex-direction: column;
-    margin-right: 15px;
 }
 .card-habilities{
     display: flex;
